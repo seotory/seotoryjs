@@ -1,5 +1,5 @@
-# interpark script project
-interpark **LOW LEVEL** script project.
+# seotory script project
+seotory **LOW LEVEL** script project.
 인터파크의 core 스크립트 프로젝트입니다. 
 
 > 하나의 js 파일 안에 하나의 일만을 한다
@@ -21,13 +21,13 @@ npm install -g gulp
 ## step.3 git clone 복사
 적당한 위치를 찾아서 리모트 클론을 합니다.
 ```
-git clone http://10.20.10.136/FRAMEWORK/interpark.script.git interpark.script
+git clone https://github.com/seotory/seotoryjs.git seotory
 ```
 
 ## step.4 의존성 모듈 설치 및 시작
 이제 npm의 package.json을 토대로 의존성 module을 받고 프로젝트를 빌드할꺼에요.
 ```
-cd interpark.script
+cd seotory
 npm run build
 ```
 
@@ -51,7 +51,5 @@ npm run build
 
 # API
 
-[**API 문서 바로가기**](http://10.20.10.136/FRAMEWORK/interpark.script/wikis/home)
+[**API 문서 바로가기**]
 
-# 문의
-서시원 사원에게~~
