@@ -1,7 +1,7 @@
 // jQuery 에서는 특정 모듈이 agruments.collee 를 사용시 firefox에서 작동하지 않아 선언하지 않는다.
 "use strict";
 
-// 인터파크 스크립트의 version 정보, package.json의 버젼과 싱크를 맞춘다.
+// seotory 스크립트의 version 정보, package.json의 버젼과 싱크를 맞춘다.
 seotory.VERSION = "<%=PKG_VERSION%>";
 
 // 최소 util 선언
@@ -31,14 +31,25 @@ function isBoolean ( target ) {
 	return target === true || target === false || toString.call( target ) === '[object Boolean]';
 }
 
+var log_setting = {
+	use : true
+}
+
 /**
  * 메세지. console error 방지
  * @param  {[type]} msg [description]
  * @return {[type]}     [description]
  */
 seotory.log = function ( msg ) {
-	if ( console ) console.log( msg );
+	if ( log_setting.use ) {
+		if ( console )
+			console.log( msg );
+	}
 };
+
+seotory.log.use = function ( b ) {
+	log_setting.use = b;
+}
 
 /**
  * seotory error 지정.
