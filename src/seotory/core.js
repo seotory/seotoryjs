@@ -31,6 +31,10 @@ function isBoolean ( target ) {
 	return target === true || target === false || toString.call( target ) === '[object Boolean]';
 }
 
+
+/**
+ * 로그 사용 체크 여부.
+ */
 var log_setting = {
 	use : true
 }
@@ -105,8 +109,8 @@ seotory.ns = function ( namespace, obj, alias ) {
 	if ( parts.length > 0 && parts[0] === "seotory" )
 		parts.splice(0, 1);
 
-	if ( parts.length > 0 && ' page msg dom solr user event '.indexOf( ' '+parts[0].toLowerCase()+' ' ) > -1 )
-		seotory.error('"'+parts[0]+'" namespace는 선점되어 사용할 수 없습니다.');
+	// if ( parts.length > 0 && ' page msg dom solr user event '.indexOf( ' '+parts[0].toLowerCase()+' ' ) > -1 )
+	//	seotory.error('"'+parts[0]+'" namespace는 선점되어 사용할 수 없습니다.');
 	
 	for ( var i=0 ; i < parts.length ; i++ ) {
 		if ( (i+1) !== parts.length ) {
